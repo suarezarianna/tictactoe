@@ -1,6 +1,7 @@
-
-
-
+var currentPlayer= "X"
+var secondPlayer= "O"
+var turnNumber= 0
+var endGame= 
 
 
 
