@@ -1,13 +1,23 @@
 var currentPlayer= "X"
-var secondPlayer= "O"
 var turnNumber= 0
-var endGame= 
-
-
-
+var endGame= false
+function performLogic(b, t){
+  $(b).hide();
+  console.log(b)
+  $(t).text(currentPlayer);
+  changePlayer();
+}
+function changePlayer(){
+  if (currentPlayer === "X"){
+    currentPlayer= "O"
+  }else{
+    currentPlayer= "X"
+  }
+}
 
 $("#button1").click(function() {
     performLogic("#button1","#tile1");
+
 });
 
 $("#button2").click(function() {
