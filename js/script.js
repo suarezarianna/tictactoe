@@ -1,11 +1,33 @@
 var currentPlayer= "X"
 var turnNumber= 0
 var endGame= false
+function addTurn(){
+  turnNumber= 1+ turnNumber
+}
 function performLogic(b, t){
   $(b).hide();
   console.log(b)
   $(t).text(currentPlayer);
   changePlayer();
+  addTurn();
+  console.log(turnNumber);
+  if (turnNumber === 9){
+    $("h1").text("It's a draw");
+    endGame= true
+    console.log(endGame);
+  }
+}
+//Next, write a function checkVerticalWins that will call the function above on all of the vertical combinations of tiles
+function playerWins(tile1, tile2, tile3){
+  if (tile1 === currentPlayer && tile2 === currentPlayer && tile3 === currentPlayer){
+    return
+  }
+}
+function checkVerticalWins(){
+  let tile1 = $("#tile1").text();
+   let tile2 = $("#tile2").text();
+    let tile3 = $("#tile3").text();
+   playerWins()
 }
 function changePlayer(){
   if (currentPlayer === "X"){
